@@ -18,6 +18,22 @@
  */
 
 const pyramid = (n) => {
+const columnWidth = 2 * n - 1;
+const columnMiddle = Math.floor(columnWidth / 2);
+
+
+for (let row = 0; row < n; ++row) {
+    let step = "";
+    for (let column = 0; column < columnWidth; ++column) {
+            if (column >= columnMiddle - row && column <= columnMiddle + row) {
+                step += "#";
+            }
+            else {
+                step += " ";
+            }
+        }
+        console.log(step)
+    }
   
 };
 
